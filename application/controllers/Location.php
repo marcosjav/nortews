@@ -25,4 +25,22 @@ class Location extends REST_Controller
         $this->set_response($this->location_model->insert($this->get()), REST_Controller::HTTP_OK);
     }
 
+    public function city_get()
+    {
+        $this->set_response($this->location_model->get_city($this->get()), REST_Controller::HTTP_OK);
+        // $this->set_response($this->get(), REST_Controller::HTTP_OK);
+    }
+
+    public function province_get()
+    {
+        $this->set_response($this->location_model->get_province($this->get()), REST_Controller::HTTP_OK);
+        // $this->set_response($this->get(), REST_Controller::HTTP_OK);
+    }
+
+    public function country_get()
+    {
+        $this->set_response($this->location_model->get_country($this->get()), REST_Controller::HTTP_OK);
+        // $this->set_response($this->get(), REST_Controller::HTTP_OK);
+    }
+
 }

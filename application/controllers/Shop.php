@@ -20,9 +20,15 @@ class Shop extends REST_Controller
         // $this->set_response($this->get(), REST_Controller::HTTP_OK);
     }
 
-    public function add_get()
+    public function fulllist_get()
     {
-        $this->set_response($this->shop_model->insert($this->get()), REST_Controller::HTTP_OK);
+        $this->set_response($this->shop_model->get_full_list($this->get()), REST_Controller::HTTP_OK);
+        // $this->set_response($this->get(), REST_Controller::HTTP_OK);
+    }
+
+    public function add_post()
+    {
+        $this->set_response($this->shop_model->insert($this->post()), REST_Controller::HTTP_OK);
     }
 
 }

@@ -20,6 +20,12 @@ class Address extends REST_Controller
         // $this->set_response($this->get(), REST_Controller::HTTP_OK);
     }
 
+    public function address_get()
+    {
+        $this->set_response($this->address_model->get_address($this->get()), REST_Controller::HTTP_OK);
+        // $this->set_response($this->get(), REST_Controller::HTTP_OK);
+    }
+
     public function add_get()
     {
         $this->set_response($this->address_model->insert($this->get()), REST_Controller::HTTP_OK);
