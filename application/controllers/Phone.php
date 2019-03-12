@@ -26,4 +26,10 @@ class Phone extends REST_Controller
         // $this->set_response($this->get(), REST_Controller::HTTP_OK);
     }
 
+    public function types_get()
+    {
+        $this->set_response($this->phone_model->get_types(), REST_Controller::HTTP_OK);
+        // $this->set_response($this->get(), REST_Controller::HTTP_OK);
+    }
+
 }

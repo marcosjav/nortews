@@ -19,9 +19,9 @@ class Company extends REST_Controller
         $this->set_response($this->company_model->get_list($this->get()), REST_Controller::HTTP_OK);
     }
 
-    public function add_get()
+    public function add_post()
     {
-        $this->set_response($this->company_model->insert($this->get()), REST_Controller::HTTP_OK);
+        $this->set_response($this->company_model->insert($this->post()), REST_Controller::HTTP_OK);
         // $this->set_response($this->company_model->get_values($this->get()), REST_Controller::HTTP_OK);
     }
 
