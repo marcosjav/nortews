@@ -28,7 +28,7 @@ class Title_model extends CI_Model {
 		}
 
 		public function insert_title($parms){
-			$name = (array_key_exists('name', $parms) ? $parms['name'] : NULL);
+			$name = (array_key_exists('name_title', $parms) ? $parms['name_title'] : NULL);
 
 			if ($name){
 				$data = array('name_title' => $name);
@@ -63,8 +63,8 @@ class Title_model extends CI_Model {
 		}
 
 		public function insert_subtitle($parms){
-			$name = (array_key_exists('name', $parms) ? $parms['name'] : NULL);
-			$id = (array_key_exists('id', $parms) ? $parms['id'] : NULL);
+			$name = (array_key_exists('name_subtitle', $parms) ? $parms['name_subtitle'] : NULL);
+			$id = (array_key_exists('title_id', $parms) ? $parms['title_id'] : NULL);
 
 			if ($name && $id){
 				$data = array(

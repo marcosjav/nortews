@@ -66,6 +66,8 @@ class Location_model extends CI_Model {
 				$this->db->or_where('province.name_province', $values['name_province']);
 			if ($values['country']) 
 				$this->db->or_where('province.country', $values['country']);
+			if ($values['id_country']) 
+				$this->db->or_where('province.country', $values['id_country']);
 
 			$query = $this->db->get();
 
@@ -84,6 +86,13 @@ class Location_model extends CI_Model {
 				$this->db->or_where('city.name_city', $values['name_city']);
 			if ($values['province']) 
 				$this->db->or_where('city.province', $values['province']);
+			if ($values['country']) 
+				$this->db->or_where('province.country', $values['country']);
+			
+			if ($values['id_province']) 
+				$this->db->or_where('city.province', $values['id_province']);
+			if ($values['id_country']) 
+				$this->db->or_where('province.country', $values['id_country']);
 
 			$query = $this->db->get();
 
